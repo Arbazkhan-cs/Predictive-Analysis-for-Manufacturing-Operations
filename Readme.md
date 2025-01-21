@@ -6,16 +6,12 @@ A FastAPI-based machine learning service that predicts when manufacturing machin
 - [Features](#features)
 - [Why Random Forest?](#why-random-forest)
 - [Tech Stack](#tech-stack)
-- [Quick Start](#quick-start)
 - [Detailed Setup](#detailed-setup)
 - [API Endpoints](#api-endpoints)
 - [Testing with Postman](#testing-with-postman)
 - [Quick Testing Guide](#quick-testing-guide)
-- [Docker Deployment](#docker-deployment)
-- [Hugging Face Deployment](#hugging-face-deployment)
 - [Data Format](#data-format)
 - [Error Handling](#error-handling)
-- [Contributing](#contributing)
 
 ### Features
 Predicts machine downtime given operational parameters
@@ -41,23 +37,6 @@ scikit-learn
 pandas
 Docker
 uvicorn
-
-## Quick Start
- 
-
-1.  Clone the repository:
-git clone https://github.com/yourusername/manufacturing-prediction-api
-cd manufacturing-prediction-api
-```
-2. **Build and run with Docker:**
-```bash
-docker build -t manufacturing-api .
-docker run -p 7860:7860 manufacturing-api
-```
-3. **Access the API:**
-API: http://localhost:7860
-Documentation: http://localhost:7860/docs
-## Detailed Setup
 
 ### Local Setup
 1. virtual environment
@@ -205,33 +184,6 @@ Common error responses:
     "detail": "CSV must contain columns: Machine_ID, Temperature, Run_Time"
 }
 ```
-
-## Docker Deployment
-
-1. Build the image:
-```bash
-docker build -t manufacturing-api.
-
-RUN docker run -p 7860:7860 manufacturing-api
-
-## Hugging Face Deployment
-
-1. Create a new Space on Hugging Face
-2. Set up Git:
-```bash
-git init
-git remote add space https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME
-git add.
-git commit -m "Initial commit"
-git push space main
-```
-
-## Contributing
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Push to the branch
-5. Create a Pull Request
 
 ## License
 MIT License
